@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Homepage>
+		<destination_dropdown>
+			<LocatorType>XPath</LocatorType>
+			<LocatorValue>//input[@id='holiday_category_id']</LocatorValue>
+		</destination_dropdown>
+		<duration_from_dropdown>
+			<LocatorType>XPath</LocatorType>
+			<LocatorValue>//select[@id='duration_d']</LocatorValue>
+		</duration_from_dropdown>
+		<Select_start_date_from_dropdown>
+			<LocatorType>XPath</LocatorType>
+			<LocatorValue>//input[@id='dphh1']</LocatorValue>
+		</Select_start_date_from_dropdown>
+		<holidayfrom_dropdown>
+			<LocatorType>XPath</LocatorType>
+			<LocatorValue>//select[@name='theme']</LocatorValue>
+		</holidayfrom_dropdown>
+		<search_holidays_icon>
+			<LocatorType>XPath</LocatorType>
+			<LocatorValue>//button[@class='btn btn-primary btn-search2']</LocatorValue>
+		</search_holidays_icon>
+	</Homepage>
+</root>

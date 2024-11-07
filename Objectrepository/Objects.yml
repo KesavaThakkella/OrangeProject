@@ -1,0 +1,30 @@
+MercuryHome_page:
+
+   destination_dropdown: //input[@id='holiday_category_id']
+   duration_dropdown: //select[@id='duration_d']
+   date_dropdown: //input[@id='dphh1']
+   holidayfrom_dropdown: //select[@name='theme']
+   Search_textbox: //button[@class='btn btn-primary btn-search2']
+   Indianholidays_dropdown: //a[contains(text(),'Indian Holidays') and @class='ind_link font14' and @title='Indian Holidays']
+
+OrangeHome_page:
+   Ouser_textbox: //input[@placeholder='Username']
+   Opassword_textbox: //input[@name='password']
+   Ologin_button: //button[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']
+   Recruitment_menu: //a[@class='oxd-main-menu-item active']
+
+NopcommerceHome_page:
+
+   email_textbox: //input[@class='email']
+   pass_textbox: //input[@class='password']
+   login_button: //button[contains(text(),'Log in')]
+
+Sales_Homepage:
+   salesmenu: //i[@class='nav-icon fas fa-shopping-cart' and //p[contains(text(),'Sales')]]
+
+Orders_Homepage:
+   orderstab: /html/body/div[3]/aside/div/div[4]/div/div/nav/ul/li[3]/ul/li[1]/a/p
+   before: //*[@id='orders-grid']/tbody/tr[
+   after: ']/td[2]'
+   Fifthcheckbox: //input[@value='5']
+   Viewbutton: (//a[@class='btn btn-default'])[1]
