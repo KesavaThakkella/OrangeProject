@@ -11,6 +11,7 @@ import Variables.configProperties;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class OHRM {
 
@@ -19,7 +20,9 @@ public class OHRM {
 	@Given("^user is on Admin OrangeHRM page launch browser$")
 	public void user_is_on_Admin_OrangeHRM_page_launch_browser() {
 
-		System.setProperty("webdriver.chrome.driver", configProperties.property.getProperty("path"));
+		// System.setProperty("webdriver.chrome.driver",
+		// configProperties.property.getProperty("path"));
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get(configProperties.property.getProperty("OsiteUrl"));
 		driver.manage().window().maximize();
@@ -49,6 +52,13 @@ public class OHRM {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(Objectproperties.GetElementProperty(identifier))).click();
 
+	}
+
+	@Then("^user clicks on userdropdown menu \"([^\"]*)\"$")
+	public void user_clicks_on_userdropdown_menu(String identifier) {
+
+		driver.findElement(By.xpath(Objectproperties.GetElementProperty(identifier))).click();
+		driver.findElement(By.xpath(Objectproperties.GetElementProperty("logout"))).click();
 	}
 
 }
