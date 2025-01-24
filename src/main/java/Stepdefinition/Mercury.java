@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import Orangewebsite.Pages.Mercurypage;
 import Variables.Objectproperties;
 import Variables.configProperties;
 import cucumber.api.java.en.Given;
@@ -17,6 +18,7 @@ import library.utility;
 public class Mercury {
 
 	WebDriver driver;
+	Mercurypage m;
 
 	@Given("^user is on title page launchbrowser$")
 	public void user_is_on_titile_page_launch_browser() {
@@ -29,8 +31,10 @@ public class Mercury {
 	}
 
 	@Then("^Select destination from \"([^\"]*)\"$")
-	public void Enter_destination(String identifier) {
+	public void Enter_destination(String identifier) throws Exception {
 
+		m = new Mercurypage(driver);
+		m.Ih();
 		driver.findElement(By.xpath(Objectproperties.GetElementProperty(identifier)))
 				.sendKeys(configProperties.property.getProperty("destinationcity"));
 
